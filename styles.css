@@ -20,8 +20,7 @@ html, body {
     width: 100%;
     height: 100%;
     display: grid;
-
-    grid-template: 1fr 5fr / 300px 8fr;
+    grid-template: 180px 1fr / 300px 8fr;
 }
 
 
@@ -40,6 +39,7 @@ html, body {
 
 .header {
     grid-column: 2 / -1;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -113,7 +113,7 @@ html, body {
 .header {
     display: grid;
     grid-template: 1fr 1fr / 1fr;
-    padding: 20px 30px;
+    padding: 10px 30px;
 }
 
 .header svg {
@@ -122,8 +122,8 @@ html, body {
 
 .header > .top {
     display: grid;
-    grid-template: 1fr / 3fr 1fr;
-    gap: 250px;
+    grid-template: 1fr / 2fr 1fr;
+    gap: 4vw;
     justify-items: space-between;
 }
 
@@ -137,7 +137,7 @@ html, body {
     & #search-ipt {
         background-color: var(--input-bg-clr);
         border: none;
-        border-radius: 16px;
+        border-radius: 24px;
         height: 38px;
         padding: 14px;
         font-size: 20px;
@@ -171,3 +171,57 @@ html, body {
 
 
 /* bottom */
+.header > .bottom {
+    display: grid;
+    grid-template: 1fr / 2fr 1fr;
+    gap: 4vw;
+    justify-items: space-between;
+    height: 100%;
+
+    & .accnt-info {
+        
+        display: grid;
+        grid-template: 1fr 1fr / 100px 1fr;
+        justify-items: start;
+        align-items: center;
+        gap: 10px;
+
+        & img {
+            grid-row: span 2;
+            height: 70px;
+            border-radius: 50px;
+            justify-self: end;
+            margin: 0px 10px;
+        }
+
+        & h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        & h2 {
+            align-self: start;
+        }
+
+        & p {
+            align-self: end;
+            font-weight: bold;
+        } 
+    }
+
+    & .options {
+        display: grid;
+        grid-template: 1fr / repeat(3, 1fr);
+
+        & button {
+            margin: 20px 10px;
+            color: white;
+            background-color: var(--sidebar-bg-clr);
+            border: none;
+            font-size: 18px;
+            border-radius: 24px;
+        }
+    }
+}
+
+/* main-container */
