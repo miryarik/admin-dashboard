@@ -11,7 +11,7 @@ html, body {
     /* custom variables */
     --sidebar-bg-clr: #1992d4;
     --test-border: 5px solid red;
-    
+    --input-bg-clr: #e2e8f0;
 }
 
 /* HL layout */
@@ -107,3 +107,67 @@ html, body {
     grid-row-end: -1;
     padding-bottom: 50px;
 }
+
+/* header */
+
+.header {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr;
+    padding: 20px 30px;
+}
+
+.header svg {
+    height: 32px;
+}
+
+.header > .top {
+    display: grid;
+    grid-template: 1fr / 3fr 1fr;
+    gap: 250px;
+    justify-items: space-between;
+}
+
+.header .top > .search {
+    display: grid;
+    grid-template: 1fr / 50px 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+
+    & #search-ipt {
+        background-color: var(--input-bg-clr);
+        border: none;
+        border-radius: 16px;
+        height: 38px;
+        padding: 14px;
+        font-size: 20px;
+        width: 100%;
+    }
+}
+
+/* top */
+
+.header .top > .options {
+    display: grid;
+    grid-template: 1fr / 50px 60px 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 35px;
+    align-self: end;
+    height: 100%;
+
+    & img {
+        height: 60px;
+        width: 60px;
+        border-radius: 30px;
+    }
+
+    & p {
+        font-size: 24px;
+        justify-self: start;
+        font-weight: bold;
+    }
+}
+
+
+/* bottom */
