@@ -252,6 +252,7 @@ body {
     gap: 20px;
     grid-template: 1fr 1fr / 4fr 1fr;
     padding: 30px 20px;
+    overflow: auto;
 
     & .projects {
         grid-row: span 2;
