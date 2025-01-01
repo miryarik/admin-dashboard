@@ -17,13 +17,18 @@ html, body {
     --card-shadow: 3px 3px 3px rgb(0, 0, 0, 0.1);
 }
 
+body {
+    display: flex;
+}
+
 /* HL layout */
 
 .container {
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template: 200px 1fr / 300px 8fr;
+    grid-template: 20vh 80vh / 15vw 8fr;
+    flex-shrink: 1;
 }
 
 
@@ -32,11 +37,14 @@ html, body {
     background-color: var(--sidebar-bg-clr);
     color: white;
     display: grid;
-    gap: 50px;
+    height: 100vh;
+
+    gap: 5vh;
     grid-template: 2fr 6fr 8fr 3fr / 1fr;
     justify-content: start;
     justify-items: center;
     align-items: start;
+    overflow: auto;
 }
 
 
@@ -225,8 +233,8 @@ html, body {
             border: none;
             font-size: 20px;
             font-weight: bold;
-            border-radius: 24px;
-            width: 120px;
+            border-radius: 5rem;
+            width: 7rem;
         }
     }
 }
@@ -258,10 +266,11 @@ html, body {
 
         & .cards-container {
             display: grid;
-            gap: 20px;;
-            grid-template-rows: repeat(3, 1fr);
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
+            
             & .card {
                 padding: 30px 20px;
                 background-color: white;
@@ -298,6 +307,7 @@ html, body {
     & .announcements {
         display: grid;
         grid-template: 36px 1fr / 1fr;
+        
 
         & h3,
         & h4 {
@@ -318,7 +328,7 @@ html, body {
             border-radius: 8px;
             box-shadow: var(--card-shadow);
             padding: 30px 30px;
-
+            overflow-y: auto;
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: repeat(auto-fit, 1fr);
@@ -363,6 +373,7 @@ html, body {
             background-color: white;
             border-radius: 8px;
             box-shadow: var(--card-shadow);
+            overflow-y: auto;
             
             display: grid;
             grid-template-columns: 1fr;
