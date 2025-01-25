@@ -4,6 +4,8 @@
 
 A responsive admin dashboard design built using CSS Grid, demonstrating advanced layout techniques and modern web design principles. This project was made as part of The Odin Project.
 
+![Project Screenshot](./ss.png)
+
 ## Key Features
 
 - Responsive layout using CSS Grid
